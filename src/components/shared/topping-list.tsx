@@ -7,18 +7,17 @@ type Props = {};
 
 const ToppingList = (props: Props) => {
   const [selectedToppings, setSelectedToppings] = useState([toppings[0]]);
+
   const handleCheckBoxCheck = (topping: ToppingTS) => {
     const isAlreadyExists = selectedToppings.some(
       (element) => element.id === topping.id,
     );
-
     if (isAlreadyExists) {
       setSelectedToppings((prev) =>
         prev.filter((elm) => elm.id !== topping.id),
       );
       return;
     }
-
     setSelectedToppings((prev) => [...prev, topping]);
   };
   return (

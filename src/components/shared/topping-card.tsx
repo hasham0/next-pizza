@@ -19,6 +19,7 @@ const ToppingCard = ({
   const isCurrentSelected = selectedToppings.some(
     (element) => element.id === topping.id,
   );
+
   return (
     <Button
       onClick={() => handleCheckBoxCheck(topping)}

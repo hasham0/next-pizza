@@ -16,10 +16,10 @@ import {
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { ShoppingCart } from "lucide-react";
 import { Label } from "@/components/ui/label";
-import { Button } from "../ui/button";
 import Image from "next/image";
 import ToppingList from "./topping-list";
 import { ProductTS } from "@/types";
+import CartButton from "./cart-button";
 
 type Props = {
   product: ProductTS;
@@ -28,7 +28,6 @@ type Props = {
 const ProductCard = ({ product }: Props) => {
   return (
     <div>
-      {" "}
       <Card className="rounded-xl border-none">
         <CardHeader className="flex items-center justify-center">
           <Image
@@ -158,14 +157,7 @@ const ProductCard = ({ product }: Props) => {
                   </div>
 
                   <ToppingList />
-
-                  <div className="mt-12 flex items-center justify-between">
-                    <span className="font-bold">₹400</span>
-                    <Button>
-                      <ShoppingCart size={20} />
-                      <span className="ml-2">Add to cart</span>
-                    </Button>
-                  </div>
+                  <CartButton />
                 </div>
               </div>
             </DialogContent>
