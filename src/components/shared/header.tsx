@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import CartIcon from "./cart-icon";
 
 type Props = {};
 
@@ -69,14 +70,7 @@ const Header = (props: Props) => {
             </li>
           </ul>
           {/* cart icon */}
-          <div className="relative">
-            <Link href={"/cart"}>
-              <ShoppingBasket className="hover:text-primary" />
-            </Link>
-            <span className="absolute -right-5 -top-4 flex h-6 w-6 items-center justify-center rounded-full bg-primary font-bold text-white">
-              3
-            </span>
-          </div>
+          <CartIcon />
           {/* phone number icon */}
           <div className="ml-12 flex items-center">
             <Phone />

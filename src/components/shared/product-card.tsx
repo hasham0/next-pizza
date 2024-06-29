@@ -14,7 +14,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { ShoppingCart } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import ToppingList from "./topping-list";
@@ -157,7 +156,7 @@ const ProductCard = ({ product }: Props) => {
                   </div>
 
                   <ToppingList />
-                  <CartButton />
+                  <CartButton productID={product.id} />
                 </div>
               </div>
             </DialogContent>

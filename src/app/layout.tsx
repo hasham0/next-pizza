@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/shared/header";
 import ReduxProvider from "@/redux/wrapper/redux-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
@@ -19,17 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReduxProvider>
-        <body
-          className={cn(
-            "min-h-screen bg-background font-manrope antialiased",
-            manrope.variable,
-          )}
-        >
+      <body
+        className={cn(
+          "min-h-screen bg-background font-manrope antialiased",
+          manrope.variable,
+        )}
+      >
+        <ReduxProvider>
           <Header />
           <main>{children}</main>
-        </body>
-      </ReduxProvider>
+          <Toaster />
+        </ReduxProvider>
+      </body>
     </html>
   );
 }
