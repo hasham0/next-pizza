@@ -1,17 +1,5 @@
-export type ProductTS = {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  price: number;
-};
-export type Topping = {
-  id: string;
-  name: string;
-  price: number;
-  image: string;
-  isAvailable: boolean;
-};
+import { ProductTS, ToppingTS } from "@/types";
+
 export const products: ProductTS[] = [
   {
     id: "1",
@@ -50,7 +38,7 @@ export const products: ProductTS[] = [
   },
 ];
 
-export const toppings: Topping[] = [
+export const toppings: ToppingTS[] = [
   {
     id: "1",
     name: "Chicken",

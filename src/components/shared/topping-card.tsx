@@ -1,14 +1,14 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { Topping } from "@/data/pizzaData";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { CircleCheck } from "lucide-react";
+import { ToppingTS } from "@/types";
 
 type Props = {
-  topping: Topping;
-  selectedToppings: Topping[];
-  handleCheckBoxCheck: (topping: Topping) => void;
+  topping: ToppingTS;
+  selectedToppings: ToppingTS[];
+  handleCheckBoxCheck: (topping: ToppingTS) => void;
 };
 
 const ToppingCard = ({

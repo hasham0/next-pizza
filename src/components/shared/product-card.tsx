@@ -1,5 +1,4 @@
 import React from "react";
-import { ProductTS } from "@/data/pizzaData";
 import {
   Card,
   CardContent,
@@ -20,6 +19,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import ToppingList from "./topping-list";
+import { ProductTS } from "@/types";
 
 type Props = {
   product: ProductTS;

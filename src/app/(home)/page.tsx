@@ -2,6 +2,7 @@ import ProductCard from "@/components/shared/product-card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { products } from "@/data/pizzaData";
+import { ProductTS } from "@/types";
 import Image from "next/image";
 
 export default function Home() {
@@ -49,14 +50,14 @@ export default function Home() {
             </TabsList>
             <TabsContent value="pizza">
               <div className="mt-6 grid grid-cols-4 gap-6">
-                {products.map((product) => (
+                {products.map((product: ProductTS) => (
                   <ProductCard product={product} key={product.id} />
                 ))}
               </div>
             </TabsContent>
             <TabsContent value="beverages">
               <div className="mt-6 grid grid-cols-4 gap-6">
-                {products.map((product) => (
+                {products.map((product: ProductTS) => (
                   <ProductCard product={product} key={product.id} />
                 ))}
               </div>
